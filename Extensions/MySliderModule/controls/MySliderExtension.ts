@@ -2,7 +2,7 @@ import { BaseControl } from 'mdk-core/controls/BaseControl';
 import { MySlider } from './MySliderPlugin/MySlider'
 
 export class MySliderClass extends BaseControl {
-    private _slider: MySlider;
+    private _slider = MySlider;
     private _minVal: number = 0;
     private _maxVal: number = 10000;
 
