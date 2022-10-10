@@ -1,0 +1,57 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Extension",
+							"_Name": "MyExtensionControlName",
+							"Module": "MySliderModule",
+							"Control": "MySliderExtension",
+							"Class": "MySliderClass",
+							"ExtensionProperties": {
+								"MaxValue": 200,
+								"MinValue": 0,
+								"Title": "Counter"
+							},
+							"Height": 72,
+							"OnValueChange": "/MDK_Slider/Rules/SetExtensionValue.js",
+							"IsVisible": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty0",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Manual Entry",
+							"PlaceHolder": "Enter number to set the slider ext's value",
+							"OnValueChange": "/MDK_Slider/Rules/SetExtensionValue.js",
+							"Enabled": true
+						}
+					],
+					"Visible": true
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "SliderExtension_",
+	"Caption": "SliderExtension_",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/MDK_Slider/Actions/ShowMessage.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}
