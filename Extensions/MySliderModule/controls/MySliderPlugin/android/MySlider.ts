@@ -1,4 +1,3 @@
-import { Observable } from '@nativescript/core/data/observable';
 import {​​​​​​ Device, View, Utils }​​​​​​ from'@nativescript/core';
 /*
   This is a way to keep iOS and Android implementation of your extension separate
@@ -147,7 +146,7 @@ export function GetMySliderClass() {
 
         public setMinValue(newMin: number): void {
             if (newMin != null && newMin != undefined) {
-                if (Device.sdkVersion >= 26) { //setMin is only available in set API Level 26 or newer
+                if (+Device.sdkVersion >= 26) { //setMin is only available in set API Level 26 or newer
                     this._seekbar.setMin(newMin);
                 }
                 else {
