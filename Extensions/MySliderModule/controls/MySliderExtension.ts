@@ -1,5 +1,6 @@
 import { BaseControl } from 'mdk-core/controls/BaseControl';
 import { MySlider } from './MySliderPlugin/MySlider'
+import {Map} from 'extension-MapFramework'
 
 export class MySliderClass extends BaseControl {
     private _slider: MySlider;
@@ -16,6 +17,8 @@ export class MySliderClass extends BaseControl {
     }
 
     private createSlider() {
+        
+        alert(Map)
         //Create MySlider and initialize its native view
         this._slider = new MySlider(this.androidContext());
         this._slider.initNativeView();
@@ -75,6 +78,7 @@ export class MySliderClass extends BaseControl {
     }
 
     public setValue(value: any, notify: boolean, isTextValue?: boolean): Promise<any> {
+        alert(value)
         //Check the value
         if (value != null && value != undefined && !isNaN(value)) {
             if (typeof value == "string" && value.trim() == "") {
